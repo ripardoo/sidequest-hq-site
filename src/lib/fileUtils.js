@@ -67,7 +67,7 @@ export const files = [
 				icon: '/fileIcon.svg'
 			}
 		],
-		highlight: false,
+		highlight: true,
 		centered: false
 	}
 ];
@@ -101,10 +101,6 @@ export function computeStackedPositions(
 			// We'll handle the centered file separately
 			continue;
 		} 
-
-        if (file.highlight) {
-            x -= 10
-        }
 
 		// Assign this position
 		positions[i] = { x, y };

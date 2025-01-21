@@ -63,7 +63,12 @@
 				<Folder {file} {openFile} />
 			{:else if stackedPositions[i]}
 				<!-- Normal stacked folder -->
-				<Folder {file} {openFile} x={stackedPositions[i].x} y={stackedPositions[i].y} />
+				<Folder 
+					{file}
+					{openFile}
+					x={stackedPositions[i].x}
+					y={stackedPositions[i].y} 
+				/>
 			{/if}
 		{:else}
 			<!-- Original file logic -->
@@ -172,11 +177,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		min-width: 80px;
-		min-height: 80px;
+		width: 80px;
+		height: 80px;
 		cursor: pointer;
 		user-select: none;
 		text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
+		border: 2px dashed transparent; /* reserve space for highlight border */
+		padding: 6px;                   /* add space around content */
+		border-radius: 4px;
+		box-sizing: border-box;         /* so border & padding fit in one box */
 	}
 	.file-icon {
 		width: 52px;
@@ -197,6 +206,7 @@
 		background-color: rgba(255, 0, 0, 0.2);
 		border-radius: 4px;
 		padding: 6px;
+		border-color: red; /* re-use the same dash style, just color it */
 	}
 
 	/* If the file is “centered,” we can place it under the countdown. 
