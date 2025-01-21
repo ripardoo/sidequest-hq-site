@@ -1,6 +1,7 @@
 export const files = [
 	{
 		name: 'welcome',
+		type: 'file',
 		link: 'https://example.com/welcome',
 		icon: '/fileIcon.svg',
 		highlight: false,
@@ -8,6 +9,7 @@ export const files = [
 	},
 	{
 		name: 'houses',
+		type: 'file',
 		link: 'https://example.com/houses',
 		icon: '/homeIcon.svg',
 		highlight: false,
@@ -15,6 +17,7 @@ export const files = [
 	},
 	{
 		name: 'assets',
+		type: 'file',
 		link: 'https://example.com/assets',
 		icon: '/robotIcon.svg',
 		highlight: false,
@@ -22,6 +25,7 @@ export const files = [
 	},
 	{
 		name: 's5_anthem',
+		type: 'file',
 		link: 'https://example.com/s5_anthem',
 		icon: '/robotIcon.svg',
 		highlight: true,
@@ -29,12 +33,43 @@ export const files = [
 	},
 	{
 		name: 'update_1',
+		type: 'file',
 		link: 'https://example.com/update_1',
 		icon: '/robotIcon.svg',
 		highlight: false,
 		centered: true
+	},
+	// New text folder example
+	{
+		name: 'docs_f',
+		type: 'folder',
+		folderType: 'text',
+		icon: '/folderIcon.svg',
+		textContent: `Multi-line textual content goes here...`,
+		highlight: false,
+		centered: false
+	},
+	// New files folder example
+	{
+		name: 'assets_f',
+		type: 'folder',
+		folderType: 'files',
+		icon: '/folderIcon.svg',
+		contents: [
+			{
+				name: 'picture1',
+				link: 'https://example.com/pic1.png',
+				icon: '/fileIcon.svg'
+			},
+			{
+				name: 'report',
+				link: 'https://example.com/report',
+				icon: '/fileIcon.svg'
+			}
+		],
+		highlight: false,
+		centered: false
 	}
-	// etc.
 ];
 
 export function computeStackedPositions(
@@ -86,3 +121,5 @@ export function computeStackedPositions(
 
 	return positions;
 }
+
+console.log("fileUtils loaded", files);

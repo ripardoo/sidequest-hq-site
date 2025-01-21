@@ -1,13 +1,14 @@
 <script>
-  import { onMount } from 'svelte';
+	import { onMount } from 'svelte';
 	import Draggable from '$lib/Draggable.svelte'; // adjust import path as needed
 	import Countdown from '$lib/Countdown.svelte';
+	import Folder from '$lib/Folder.svelte'; // new import
 	import { files, computeStackedPositions } from '$lib/fileUtils.js'; // Importing from the new file
 
 	// We'll store the computed positions in an array `stackedPositions`.
 	let stackedPositions = [];
-  $: innerWidth = 0
-  $: innerHeight = 0
+	$: innerWidth = 0;
+	$: innerHeight = 0;
 
 	// 3) On mount, compute the positions once
 	onMount(() => {
@@ -16,7 +17,12 @@
 
 	// Called when the user truly "clicks" the file (i.e. didn't drag far)
 	function openFile(file) {
+		if (!file?.link) {
+			console.error('Missing link:', file);
+			return;
+		}
 		window.open(file.link, '_blank');
+		console.log('Opened file:', file.name);
 	}
 </script>
 
@@ -51,26 +57,36 @@
 
 	<!-- Draggable files, each with a custom icon -->
 	{#each files as file, i}
-		<!-- If the file is "centered", we skip normal stacking -->
-		{#if file.centered}
-			<!-- Place at the center (under countdown). 
+		{#if file.type === 'folder'}
+			{#if file.centered}
+				<!-- Centered folder, no stacking -->
+				<Folder {file} {openFile} />
+			{:else if stackedPositions[i]}
+				<!-- Normal stacked folder -->
+				<Folder {file} {openFile} x={stackedPositions[i].x} y={stackedPositions[i].y} />
+			{/if}
+		{:else}
+			<!-- Original file logic -->
+			{#if file.centered}
+				<!-- Place at the center (under countdown). 
            We also apply highlight if needed. -->
 
-			<!-- 30 = half file width (approx) -->
-			<!-- 35 = half file height (approx) -->
-			<Draggable
-				x={innerWidth / 2}
-				y={innerHeight * 0.7 - 35}
-				onActuallyClick={() => openFile(file)}
-			>
-				<div class="file file-center {file.highlight ? 'highlighted-file' : ''}" draggable="false">
-					<img class="file-icon" src={file.icon} alt="File icon" draggable="false" />
-					<div class="file-label">{file.name}</div>
-				</div>
-			</Draggable>
-		{:else}
-			<!-- Normal stacked file -->
-			{#if stackedPositions[i] != null}
+				<!-- 30 = half file width (approx) -->
+				<!-- 35 = half file height (approx) -->
+				<Draggable
+					x={innerWidth / 2}
+					y={innerHeight * 0.7 - 35}
+					onActuallyClick={() => openFile(file)}
+				>
+					<div
+						class="file file-center {file.highlight ? 'highlighted-file' : ''}"
+						draggable="false"
+					>
+						<img class="file-icon" src={file.icon} alt="File icon" draggable="false" />
+						<div class="file-label">{file.name}</div>
+					</div>
+				</Draggable>
+			{:else if stackedPositions[i]}
 				<Draggable
 					x={stackedPositions[i].x}
 					y={stackedPositions[i].y}
@@ -85,6 +101,8 @@
 		{/if}
 	{/each}
 </div>
+
+<svelte:window bind:innerWidth bind:innerHeight />
 
 <style>
 	/* Global styling */
@@ -125,7 +143,7 @@
 		animation: noiseShift 1s steps(7) infinite;
 		opacity: 0.15;
 		pointer-events: none;
-    color: rgba(121, 33, 27, 0.9);
+		color: rgba(121, 33, 27, 0.9);
 	}
 
 	@keyframes noiseShift {
@@ -178,7 +196,7 @@
 		border: 2px dashed red;
 		background-color: rgba(255, 0, 0, 0.2);
 		border-radius: 4px;
-    padding: 6px;
+		padding: 6px;
 	}
 
 	/* If the file is “centered,” we can place it under the countdown. 
@@ -210,8 +228,3 @@
 		text-decoration: underline;
 	}
 </style>
-
-<svelte:window 
-  bind:innerWidth
-  bind:innerHeight
-/>
