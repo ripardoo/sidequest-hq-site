@@ -27,7 +27,7 @@
 </script>
 
 {#if innerWidth < 768}
-	<div class="mobile-warning">Sorry the Sidequest HQ is only on desktop rn :(</div>
+	<div class="mobile-warning">Sorry the Sidequest HQ currently needs a bigger screen :( We'll try to do a mobile version later.</div>
 {:else}
 	<!-- The main desktop container, with mouse events for accessibility -->
 	<div class="desktop" role="application" aria-label="Draggable desktop">
