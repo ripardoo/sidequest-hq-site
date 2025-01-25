@@ -105,8 +105,8 @@
 		position: absolute;
 		top: 120px;
 		left: 20px;
-		width: 300px;
-		height: 200px;
+		width: 500px;
+		height: 400px;
 		background: #222;
 		border: 2px solid #555;
 		z-index: 9999;
@@ -123,7 +123,8 @@
 		font-size: 0.7rem;
 	}
 	.folder-text {
-		flex: 1;
+		height: auto;
+		width: 100%;
 		padding: 10px;
 		overflow: auto;
 		white-space: pre-wrap;

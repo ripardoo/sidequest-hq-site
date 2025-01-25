@@ -22,12 +22,28 @@ export const files = [
 	// New text folder example
 	// New files folder example
 	{
+		name: 'How it Works',
+		type: 'folder',
+		folderType: 'text',
+		icon: '/folderIcon.svg',
+		textContent: `All the folders can be opened, all the files are links :) \n\nIf you have any questions/suggestions on how to make it better, ping me @ roope@mysidequest.xyz!`,
+		highlight: true,
+		centered: false
+	},
+	{
 		name: 'Recordings',
 		type: 'folder',
 		folderType: 'both',
 		icon: '/folderIcon.svg',
-		textContent: `The recordgings will appear here!`,
+		textContent: `You will find all the recordings here when we have them!`,
 		contents: [
+			{
+				name: 'Kickoff',
+				type: 'file',
+				folderType: 'text',
+				link: 'https://www.youtube.com/live/SmEzXA23S8I',
+				icon: '/videoIcon.svg',
+			}	
 		],
 		highlight: true,
 		centered: false
@@ -38,8 +54,8 @@ export function computeStackedPositions(
     windowHeight,
     windowWidth,
     files, 
-    fileWidth=80, 
-    fileHeight=80,
+    fileWidth=100, 
+    fileHeight=100,
     marginTop=50,
     marginRight=40,
     verticalGap=20,
