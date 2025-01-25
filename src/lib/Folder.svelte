@@ -124,7 +124,6 @@
 	}
 	.folder-text {
 		height: auto;
-		width: 100%;
 		padding: 10px;
 		overflow: auto;
 		white-space: pre-wrap;

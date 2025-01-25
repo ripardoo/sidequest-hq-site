@@ -51,7 +51,7 @@
 				>
 			</div>
 			<div>
-				<a href="https://lu.ma/calendar/manage/cal-d1qiWhqcVi7fpAO" target="_blank">view master calendar here</a>
+				<a href="https://lu.ma/sidequest-s1" target="_blank">view master calendar here</a>
 			</div>
 		</div>
 
