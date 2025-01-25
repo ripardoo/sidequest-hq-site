@@ -1,36 +1,6 @@
 export const files = [
-	{
-		name: 'welcome',
-		type: 'file',
-		link: 'https://example.com/welcome',
-		icon: '/fileIcon.svg',
-		highlight: false,
-		centered: false
-	},
-	{
-		name: 'houses',
-		type: 'file',
-		link: 'https://example.com/houses',
-		icon: '/homeIcon.svg',
-		highlight: false,
-		centered: false
-	},
-	{
-		name: 'assets',
-		type: 'file',
-		link: 'https://example.com/assets',
-		icon: '/robotIcon.svg',
-		highlight: false,
-		centered: false
-	},
-	{
-		name: 's5_anthem',
-		type: 'file',
-		link: 'https://example.com/s5_anthem',
-		icon: '/robotIcon.svg',
-		highlight: true,
-		centered: false
-	},
+
+	/* Example files
 	{
 		name: 'update_1',
 		type: 'file',
@@ -48,24 +18,16 @@ export const files = [
 		textContent: `Multi-line textual content goes here...`,
 		highlight: false,
 		centered: false
-	},
+	}, */
+	// New text folder example
 	// New files folder example
 	{
-		name: 'assets_f',
+		name: 'Recordings',
 		type: 'folder',
-		folderType: 'files',
+		folderType: 'both',
 		icon: '/folderIcon.svg',
+		textContent: `The recordgings will appear here!`,
 		contents: [
-			{
-				name: 'picture1',
-				link: 'https://example.com/pic1.png',
-				icon: '/fileIcon.svg'
-			},
-			{
-				name: 'report',
-				link: 'https://example.com/report',
-				icon: '/fileIcon.svg'
-			}
 		],
 		highlight: true,
 		centered: false

@@ -18,9 +18,17 @@
 </script>
 
 <Draggable {x} {y} onActuallyClick={toggleOpen}>
-	<div class="folder folder-center {file.highlight ? 'highlighted-folder' : ''} file" draggable="false">
+	<div
+		class="folder folder-center {file.highlight ? 'highlighted-folder' : ''} file"
+		draggable="false"
+	>
 		<!-- Switch icon when folder is open -->
-		<img class="folder-icon" src={isOpen ? '/openFolderIcon.svg' : file.icon} alt="Folder icon" draggable="false"/>
+		<img
+			class="folder-icon"
+			src={isOpen ? '/openFolderIcon.svg' : file.icon}
+			alt="Folder icon"
+			draggable="false"
+		/>
 		<div class="folder-label">{file.name}</div>
 	</div>
 </Draggable>
@@ -30,11 +38,21 @@
 		<div class="folder-window">
 			<div class="folder-header">
 				<div>{file.name}</div>
-				<button on:click={toggleOpen}>Close</button>
+				<button on:click={toggleOpen}>X</button>
 			</div>
 			{#if file.folderType === 'text'}
 				<div class="folder-text">{file.textContent}</div>
 			{:else if file.folderType === 'files'}
+				<div class="folder-contents">
+					{#each file.contents as sub}
+						<button class="subfile" on:click={() => openFile(sub)} aria-label={`Open ${sub.name}`}>
+							<img class="subfile-icon" src={sub.icon} alt="Subfile icon" />
+							<div class="subfile-label">{sub.name}</div>
+						</button>
+					{/each}
+				</div>
+			{:else if file.folderType === 'both'}
+				<div class="folder-text">{file.textContent}</div>
 				<div class="folder-contents">
 					{#each file.contents as sub}
 						<button class="subfile" on:click={() => openFile(sub)} aria-label={`Open ${sub.name}`}>
@@ -62,8 +80,8 @@
 		padding: 6px;
 		border-radius: 4px;
 		box-sizing: border-box;
-		width: 80px;
-		height: 80px;
+		width: 100px;
+		height: 100px;
 	}
 	.folder-icon {
 		width: 52px;
@@ -125,8 +143,8 @@
 		align-items: center;
 		width: 60px;
 		cursor: pointer;
-        background: none;
-        border: none;
+		background: none;
+		border: none;
 	}
 	.subfile-icon {
 		width: 32px;

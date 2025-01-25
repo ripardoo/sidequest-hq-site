@@ -26,86 +26,89 @@
 	}
 </script>
 
-<!-- The main desktop container, with mouse events for accessibility -->
-<div class="desktop" role="application" aria-label="Draggable desktop">
-	<!-- 1) Background layer -->
-	<div class="background-layer"></div>
+{#if innerWidth < 768}
+	<div class="mobile-warning">Sorry the Sidequest HQ is only on desktop rn :(</div>
+{:else}
+	<!-- The main desktop container, with mouse events for accessibility -->
+	<div class="desktop" role="application" aria-label="Draggable desktop">
+		<!-- 1) Background layer -->
+		<div class="background-layer"></div>
 
-	<!-- 2) Noise layer with animated background -->
-	<div class="noise-layer"></div>
+		<!-- 2) Noise layer with animated background -->
+		<div class="noise-layer"></div>
 
-	<!-- 3) Darkening overlay -->
-	<div class="dark-layer"></div>
+		<!-- 3) Darkening overlay -->
+		<div class="dark-layer"></div>
 
-	<!-- Some schedule text in the corner -->
-	<div class="schedule">
-		<div>first week schedule</div>
-		<div>
-			june 18 – lecture #1 – ideas <a href="https://example.com/rsvp" target="_blank">rsvp</a>
-		</div>
-		<div>
-			june 20 – lab #1 – decide on your ideas <a href="https://example.com/rsvp" target="_blank"
-				>rsvp</a
-			>
-		</div>
-		<div>
-			<a href="https://example.com/master_calendar" target="_blank">view master calendar here</a>
-		</div>
-	</div>
-
-	<Countdown targetDate={new Date('2025-03-03T00:00:00')} />
-
-	<!-- Draggable files, each with a custom icon -->
-	{#each files as file, i}
-		{#if file.type === 'folder'}
-			{#if file.centered}
-				<!-- Centered folder, no stacking -->
-				<Folder {file} {openFile} />
-			{:else if stackedPositions[i]}
-				<!-- Normal stacked folder -->
-				<Folder 
-					{file}
-					{openFile}
-					x={stackedPositions[i].x}
-					y={stackedPositions[i].y} 
-				/>
-			{/if}
-		{:else}
-			<!-- Original file logic -->
-			{#if file.centered}
-				<!-- Place at the center (under countdown). 
-           We also apply highlight if needed. -->
-
-				<!-- 30 = half file width (approx) -->
-				<!-- 35 = half file height (approx) -->
-				<Draggable
-					x={innerWidth / 2}
-					y={innerHeight * 0.7 - 35}
-					onActuallyClick={() => openFile(file)}
+		<!-- Some schedule text in the corner -->
+		<div class="schedule">
+			<div>first week schedule</div>
+			<div>
+				January 28 – Sesh #1 – Lock in your idea <a href="https://lu.ma/sywgdkm1" target="_blank">rsvp</a>
+			</div>
+			<div>
+				January 30 – lab #1 – Going through your idea slides <a href="https://example.com/rsvp" target="_blank">rsvp</a
 				>
-					<div
-						class="file file-center {file.highlight ? 'highlighted-file' : ''}"
-						draggable="false"
+			</div>
+			<div>
+				<a href="https://lu.ma/calendar/manage/cal-d1qiWhqcVi7fpAO" target="_blank">view master calendar here</a>
+			</div>
+		</div>
+
+		<Countdown targetDate={new Date('2025-03-03T00:00:00')} />
+
+		<!-- Draggable files, each with a custom icon -->
+		{#each files as file, i}
+			{#if file.type === 'folder'}
+				{#if file.centered}
+					<!-- Centered folder, no stacking -->
+					<Folder {file} {openFile} />
+				{:else if stackedPositions[i]}
+					<!-- Normal stacked folder -->
+					<Folder 
+						{file}
+						{openFile}
+						x={stackedPositions[i].x}
+						y={stackedPositions[i].y} 
+					/>
+				{/if}
+			{:else}
+				<!-- Original file logic -->
+				{#if file.centered}
+					<!-- Place at the center (under countdown). 
+				We also apply highlight if needed. -->
+
+					<!-- 30 = half file width (approx) -->
+					<!-- 35 = half file height (approx) -->
+					<Draggable
+						x={innerWidth / 2}
+						y={innerHeight * 0.7 - 35}
+						onActuallyClick={() => openFile(file)}
 					>
-						<img class="file-icon" src={file.icon} alt="File icon" draggable="false" />
-						<div class="file-label">{file.name}</div>
-					</div>
-				</Draggable>
-			{:else if stackedPositions[i]}
-				<Draggable
-					x={stackedPositions[i].x}
-					y={stackedPositions[i].y}
-					onActuallyClick={() => openFile(file)}
-				>
-					<div class="file {file.highlight ? 'highlighted-file' : ''}" draggable="false">
-						<img class="file-icon" src={file.icon} alt="File icon" draggable="false" />
-						<div class="file-label">{file.name}</div>
-					</div>
-				</Draggable>
+						<div
+							class="file file-center {file.highlight ? 'highlighted-file' : ''}"
+							draggable="false"
+						>
+							<img class="file-icon" src={file.icon} alt="File icon" draggable="false" />
+							<div class="file-label">{file.name}</div>
+						</div>
+					</Draggable>
+				{:else if stackedPositions[i]}
+					<Draggable
+						x={stackedPositions[i].x}
+						y={stackedPositions[i].y}
+						onActuallyClick={() => openFile(file)}
+					>
+						<div class="file {file.highlight ? 'highlighted-file' : ''}" draggable="false">
+							<img class="file-icon" src={file.icon} alt="File icon" draggable="false" />
+							<div class="file-label">{file.name}</div>
+						</div>
+					</Draggable>
+				{/if}
 			{/if}
-		{/if}
-	{/each}
-</div>
+		{/each}
+	</div>
+{/if}
 
 <svelte:window bind:innerWidth bind:innerHeight />
 
@@ -177,8 +180,8 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 80px;
-		height: 80px;
+		width: 100px;
+		height: 100px;
 		cursor: pointer;
 		user-select: none;
 		text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
@@ -236,5 +239,16 @@
 	}
 	.schedule a:hover {
 		text-decoration: underline;
+	}
+
+	.mobile-warning {
+		color: #fff;
+		position: absolute;
+		top: 50%;
+		left: 50%;
+		transform: translate(-50%, -50%);
+		text-align: center;
+		font-size: 0.85rem;
+		line-height: 1.5;
 	}
 </style>
