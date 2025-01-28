@@ -109,6 +109,11 @@
 		font-family: 'Press Start 2P', 'Monaco', 'Courier New', monospace;
 		overflow: hidden;
 		background: #000; /* fallback if BG.png not found */
+		line-height: 1.3;
+	}
+	:global(a) {
+		color: #aaaaaa;
+		text-decoration: none;
 	}
 
 	.desktop {

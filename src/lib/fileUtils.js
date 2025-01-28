@@ -22,11 +22,11 @@ export const files = [
 	// New text folder example
 	// New files folder example
 	{
-		name: 'How it Works',
+		name: 'HELP',
 		type: 'folder',
 		folderType: 'text',
 		icon: '/folderIcon.svg',
-		textContent: `All the folders can be opened, all the files are links :) \n\nIf you have any questions/suggestions on how to make it better, ping me @ roope@mysidequest.xyz!`,
+		textContent: `All the folders can be opened, all the files are links :) \n\nIf you have any questions/suggestions on how to make it better, ping me @ roope@mysidequest.xyz! \n\n If you want your questions to be answered faster, you can email the whole team \n<a href="mailto:team@mysideqeust.xyz">team@mysideqeust.xyz</a>`,
 		highlight: true,
 		centered: false
 	},
@@ -37,13 +37,24 @@ export const files = [
 		icon: '/folderIcon.svg',
 		textContent: `You will find all the recordings here when we have them!`,
 		contents: [
+			
 			{
 				name: 'Kickoff',
 				type: 'file',
-				folderType: 'text',
 				link: 'https://www.youtube.com/live/SmEzXA23S8I',
 				icon: '/videoIcon.svg',
-			}	
+				highlight: false,
+				centered: false
+			},
+			{
+				name: 'Session 1',
+				type: 'file',
+				folderType: 'text',
+				link: 'https://www.youtube.com/live/qGxMfhxq4BE',
+				icon: '/videoIcon.svg',
+				highlight: false,
+				centered: false
+			}
 		],
 		highlight: true,
 		centered: false

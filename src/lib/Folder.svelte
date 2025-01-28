@@ -41,7 +41,7 @@
 				<button on:click={toggleOpen}>X</button>
 			</div>
 			{#if file.folderType === 'text'}
-				<div class="folder-text">{file.textContent}</div>
+				<div class="folder-text">{@html file.textContent}</div>
 			{:else if file.folderType === 'files'}
 				<div class="folder-contents">
 					{#each file.contents as sub}
@@ -52,7 +52,7 @@
 					{/each}
 				</div>
 			{:else if file.folderType === 'both'}
-				<div class="folder-text">{file.textContent}</div>
+				<div class="folder-text">{@html file.textContent}</div>
 				<div class="folder-contents">
 					{#each file.contents as sub}
 						<button class="subfile" on:click={() => openFile(sub)} aria-label={`Open ${sub.name}`}>
@@ -90,6 +90,7 @@
 	.folder-label {
 		margin-top: 4px;
 		font-size: 0.5rem;
+		line-height: 1.5;
 		background-color: rgba(0, 0, 0, 0.3);
 		color: #fff;
 		padding: 5px;
@@ -145,6 +146,7 @@
 		cursor: pointer;
 		background: none;
 		border: none;
+		margin: 5px;
 	}
 	.subfile-icon {
 		width: 32px;
@@ -155,6 +157,7 @@
 		font-size: 0.6rem;
 		color: #fff;
 		text-align: center;
+		font-family: 'Press Start 2P', 'Monaco', 'Courier New', monospace;
 	}
 	.folder-error {
 		padding: 10px;
