@@ -4,6 +4,7 @@
 	import Countdown from '$lib/Countdown.svelte';
 	import Folder from '$lib/Folder.svelte'; // new import
 	import { files, computeStackedPositions } from '$lib/fileUtils.js'; // Importing from the new file
+	import Schedule from './Schedule.svelte';
 
 	// We'll store the computed positions in an array `stackedPositions`.
 	let stackedPositions = [];
@@ -41,19 +42,7 @@
 		<div class="dark-layer"></div>
 
 		<!-- Some schedule text in the corner -->
-		<div class="schedule">
-			<div>first week schedule</div>
-			<div>
-				January 28 – Sesh #1 – Lock in your idea <a href="https://lu.ma/sywgdkm1" target="_blank">rsvp</a>
-			</div>
-			<div>
-				January 30 – lab #1 – Going through your idea slides <a href="https://example.com/rsvp" target="_blank">rsvp</a
-				>
-			</div>
-			<div>
-				<a href="https://lu.ma/sidequest-s1" target="_blank">view master calendar here</a>
-			</div>
-		</div>
+		<Schedule />
 
 		<Countdown targetDate={new Date('2025-03-03T00:00:00')} />
 
@@ -223,24 +212,7 @@
 		transform: translate(-50%, -50%);
 	}
 
-	/* The schedule info in the corner */
-	.schedule {
-		position: absolute;
-		top: 20px;
-		left: 20px;
-		color: #ffffff;
-		z-index: 5;
-		line-height: 1.5;
-		font-size: 0.85rem;
-	}
-	.schedule a {
-		color: #aaaaaa;
-		text-decoration: none;
-	}
-	.schedule a:hover {
-		text-decoration: underline;
-	}
-
+	
 	.mobile-warning {
 		color: #fff;
 		position: absolute;
