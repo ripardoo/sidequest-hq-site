@@ -26,7 +26,7 @@ export const files = [
 		type: 'folder',
 		folderType: 'text',
 		icon: '/folderIcon.svg',
-		textContent: `All the folders can be opened, all the files are links :) \n\nIf you have any questions/suggestions on how to make it better, ping me @ roope@mysidequest.xyz! \n\n If you want your questions to be answered faster, you can email the whole team \n<a href="mailto:team@mysideqeust.xyz">team@mysideqeust.xyz</a>`,
+		textContent: `All the folders can be opened, all the files are links :) \n\nIf you have any questions/suggestions on how to make it better, ping me @ <a href="mailto:roope@mysideqeust.xyz">roope@mysidequest.xyz</a>! \n\n If you want your questions to be answered faster, you can email the whole team \n<a href="mailto:team@mysideqeust.xyz">team@mysideqeust.xyz</a>`,
 		highlight: true,
 		centered: false
 	},
