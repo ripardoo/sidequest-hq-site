@@ -115,6 +115,9 @@
 		color: #aaaaaa;
 		text-decoration: none;
 	}
+	:global(a:hover) {
+		text-decoration: underline;
+	}
 
 	.desktop {
 		position: relative;
