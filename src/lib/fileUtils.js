@@ -4,7 +4,7 @@ export const files = [
 	{
 		name: 'update_1',
 		type: 'file',
-		link: 'https://example.com/update_1',
+		link: 'https://docs.google.com/document/d/14p5RW4gcx3gG9uiUuNKy-mFnZyUMM3ukfD8aP0l-p2Q/edit?tab=t.0',
 		icon: '/robotIcon.svg',
 		highlight: false,
 		centered: true
@@ -58,7 +58,15 @@ export const files = [
 		],
 		highlight: true,
 		centered: false
-	}
+	},
+	{
+		name: 'Ideas in the wild',
+		type: 'file',
+		link: 'https://docs.google.com/document/d/14p5RW4gcx3gG9uiUuNKy-mFnZyUMM3ukfD8aP0l-p2Q/edit?tab=t.0',
+		icon: '/robotIcon.svg',
+		highlight: false,
+		centered: true
+	},
 ];
 
 export function computeStackedPositions(
