@@ -62,7 +62,7 @@ export const files = [
 	{
 		name: 'Ideas in the wild',
 		type: 'file',
-		link: 'https://docs.google.com/document/d/14p5RW4gcx3gG9uiUuNKy-mFnZyUMM3ukfD8aP0l-p2Q/edit?tab=t.0',
+		link: 'https://docs.google.com/document/d/14p5RW4gcx3gG9uiUuNKy-mFnZyUMM3ukfD8aP0l-p2Q/',
 		icon: '/robotIcon.svg',
 		highlight: false,
 		centered: true
