@@ -60,12 +60,23 @@ export const files = [
 		centered: false
 	},
 	{
-		name: 'Ideas in the wild',
-		type: 'file',
-		link: 'https://docs.google.com/document/d/14p5RW4gcx3gG9uiUuNKy-mFnZyUMM3ukfD8aP0l-p2Q/',
-		icon: '/robotIcon.svg',
+		name: 'Resources',
+		type: 'folder',
+		folderType: 'both',
+		icon: '/folderIcon.svg',
+		textContent: 'Will be updated to include more resources soon!',
+		contents: [
+			{
+				name: 'W1 Ideas in the wild',
+				type: 'file',
+				link: 'https://docs.google.com/document/d/14p5RW4gcx3gG9uiUuNKy-mFnZyUMM3ukfD8aP0l-p2Q/',
+				icon: '/robotIcon.svg',
+				highlight: false,
+				centered: true
+			},
+		],
 		highlight: false,
-		centered: true
+		centered: false
 	},
 ];
 

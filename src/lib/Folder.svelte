@@ -142,15 +142,15 @@
 		display: flex;
 		flex-direction: column;
 		align-items: center;
-		width: 60px;
+		width: 80px;
 		cursor: pointer;
 		background: none;
 		border: none;
 		margin: 5px;
 	}
 	.subfile-icon {
-		width: 32px;
-		height: 32px;
+		width: 50;
+		height: 50px;
 	}
 	.subfile-label {
 		margin-top: 4px;
