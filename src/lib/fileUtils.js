@@ -54,7 +54,15 @@ export const files = [
 				icon: '/videoIcon.svg',
 				highlight: false,
 				centered: false
-			}
+			},
+			{
+				name: "Lab 1",
+				type: 'file',
+				link: 'https://www.youtube.com/live/zMIDdaiRmKo',
+				icon: '/videoIcon.svg',
+				highlight: false,
+				centered: false
+			},
 		],
 		highlight: true,
 		centered: false
