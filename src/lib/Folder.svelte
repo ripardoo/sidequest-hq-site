@@ -146,7 +146,8 @@
 		cursor: pointer;
 		background: none;
 		border: none;
-		margin: 5px;
+		margin: 10px;
+		margin-left: 20px;
 	}
 	.subfile-icon {
 		width: 50;
@@ -154,6 +155,7 @@
 	}
 	.subfile-label {
 		margin-top: 4px;
+		line-height: 1.4;
 		font-size: 0.6rem;
 		color: #fff;
 		text-align: center;

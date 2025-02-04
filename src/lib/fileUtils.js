@@ -27,7 +27,7 @@ export const files = [
 		folderType: 'text',
 		icon: '/folderIcon.svg',
 		textContent: `All the folders can be opened, all the files are links :) \n\nIf you have any questions/suggestions on how to make it better, ping me @ <a href="mailto:roope@mysideqeust.xyz">roope@mysidequest.xyz</a>! \n\n If you want your questions to be answered faster, you can email the whole team \n<a href="mailto:team@mysideqeust.xyz">team@mysideqeust.xyz</a>`,
-		highlight: true,
+		highlight: false,
 		centered: false
 	},
 	{
@@ -63,6 +63,14 @@ export const files = [
 				highlight: false,
 				centered: false
 			},
+			{
+				name: "Session 2",
+				type: 'file',
+				link: 'https://youtube.com/live/6BOqzK3MnMk',
+				icon: '/videoIcon.svg',
+				highlight: false,
+				centered: false
+			},
 		],
 		highlight: true,
 		centered: false
@@ -82,10 +90,53 @@ export const files = [
 				highlight: false,
 				centered: true
 			},
+			{
+				name: "Lilyas guide to prototyping with Google!",
+				type: 'file',
+				link: 'https://drive.google.com/file/d/1NmTyqGj7CqeeEyhLtBCwlvsOTqzJP0Od/view?usp=sharing',
+				icon: '/robotIcon.svg',
+				highlight: false,
+				centered: true
+			},
+			{
+				name: "Roopes guide on running R1 locally!",
+				type: 'file',
+				link: 'https://docs.google.com/document/d/1MxsfOZYn_5EsoYZTqJMvymNNiee7EdHn_o0jM1UmPRM/edit?usp=sharing',
+				icon: '/robotIcon.svg',
+				highlight: false,
+				centered: true
+			}
 		],
 		highlight: false,
 		centered: false
 	},
+	{
+		name: "Submissions",
+		type: 'folder',
+		folderType: 'both',
+		icon: '/folderIcon.svg',
+		textContent: "You can submit your assignments from these links! We'll update these links as we go!",
+		contents: [
+			{
+				name: 'W1 submission',
+				type: 'file',
+				link: 'https://mysidequest.xyz/week1-submission',
+				icon: '/fileIcon.svg',
+				highlight: false,
+				centered: false
+			},
+			{
+				name: 'W2 submission',
+				type: 'file',
+				link: 'https://mysidequest.xyz/week2-submission',
+				icon: '/fileIcon.svg',
+				highlight: false,
+				centered: false
+			},
+		],
+		highlight: true,
+		centered: true
+	}
 ];
 
 export function computeStackedPositions(

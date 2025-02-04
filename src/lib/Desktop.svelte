@@ -28,7 +28,10 @@
 </script>
 
 {#if innerWidth < 768}
-	<div class="mobile-warning">Sorry the Sidequest HQ currently needs a bigger screen :( We'll try to do a mobile version later.</div>
+	<div class="mobile-warning">
+		Sorry the Sidequest HQ currently needs a bigger screen :( We'll try to do a mobile version
+		later.
+	</div>
 {:else}
 	<!-- The main desktop container, with mouse events for accessibility -->
 	<div class="desktop" role="application" aria-label="Draggable desktop">
@@ -51,15 +54,10 @@
 			{#if file.type === 'folder'}
 				{#if file.centered}
 					<!-- Centered folder, no stacking -->
-					<Folder {file} {openFile} />
+					<Folder {file} {openFile} x={35} y={innerHeight * 0.6 - 120} />
 				{:else if stackedPositions[i]}
 					<!-- Normal stacked folder -->
-					<Folder 
-						{file}
-						{openFile}
-						x={stackedPositions[i].x}
-						y={stackedPositions[i].y} 
-					/>
+					<Folder {file} {openFile} x={stackedPositions[i].x} y={stackedPositions[i].y} />
 				{/if}
 			{:else}
 				<!-- Original file logic -->
@@ -183,9 +181,9 @@
 		user-select: none;
 		text-shadow: 0 0 2px rgba(0, 0, 0, 0.7);
 		border: 2px dashed transparent; /* reserve space for highlight border */
-		padding: 6px;                   /* add space around content */
+		padding: 6px; /* add space around content */
 		border-radius: 4px;
-		box-sizing: border-box;         /* so border & padding fit in one box */
+		box-sizing: border-box; /* so border & padding fit in one box */
 	}
 	.file-icon {
 		width: 52px;
@@ -220,7 +218,6 @@
 		transform: translate(-50%, -50%);
 	}
 
-	
 	.mobile-warning {
 		color: #fff;
 		position: absolute;
