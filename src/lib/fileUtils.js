@@ -71,6 +71,14 @@ export const files = [
 				highlight: false,
 				centered: false
 			},
+			{
+				name: "Lab 2",
+				type: 'file',
+				link: 'https://www.youtube.com/live/SB2KwCEayws?si=BsBRoMTTeWRnC-uJ',
+				icon: '/videoIcon.svg',
+				highlight: false,
+				centered: false
+			}
 		],
 		highlight: true,
 		centered: false
@@ -102,6 +110,14 @@ export const files = [
 				name: "Roopes guide on running R1 locally!",
 				type: 'file',
 				link: 'https://docs.google.com/document/d/1MxsfOZYn_5EsoYZTqJMvymNNiee7EdHn_o0jM1UmPRM/edit?usp=sharing',
+				icon: '/robotIcon.svg',
+				highlight: false,
+				centered: true
+			},
+			{
+				name: "FigJam board for Lab #2",
+				type: 'file',
+				link: 'https://mysidequest.xyz/figjam',
 				icon: '/robotIcon.svg',
 				highlight: false,
 				centered: true
