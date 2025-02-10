@@ -84,6 +84,33 @@ export const files = [
 		centered: false
 	},
 	{
+		name: "Submissions",
+		type: 'folder',
+		folderType: 'both',
+		icon: '/folderIcon.svg',
+		textContent: "You can submit your assignments from these links! We'll update these links as we go!",
+		contents: [
+			{
+				name: 'W1 submission',
+				type: 'file',
+				link: 'https://mysidequest.xyz/week1-submission',
+				icon: '/fileIcon.svg',
+				highlight: false,
+				centered: false
+			},
+			{
+				name: 'W2 submission',
+				type: 'file',
+				link: 'https://mysidequest.xyz/week2-submission',
+				icon: '/fileIcon.svg',
+				highlight: false,
+				centered: false
+			},
+		],
+		highlight: true,
+		centered: false
+	},
+	{
 		name: 'Resources',
 		type: 'folder',
 		folderType: 'both',
@@ -125,33 +152,6 @@ export const files = [
 		],
 		highlight: false,
 		centered: false
-	},
-	{
-		name: "Submissions",
-		type: 'folder',
-		folderType: 'both',
-		icon: '/folderIcon.svg',
-		textContent: "You can submit your assignments from these links! We'll update these links as we go!",
-		contents: [
-			{
-				name: 'W1 submission',
-				type: 'file',
-				link: 'https://mysidequest.xyz/week1-submission',
-				icon: '/fileIcon.svg',
-				highlight: false,
-				centered: false
-			},
-			{
-				name: 'W2 submission',
-				type: 'file',
-				link: 'https://mysidequest.xyz/week2-submission',
-				icon: '/fileIcon.svg',
-				highlight: false,
-				centered: false
-			},
-		],
-		highlight: true,
-		centered: true
 	}
 ];
 
