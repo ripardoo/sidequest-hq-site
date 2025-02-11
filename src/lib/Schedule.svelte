@@ -1,17 +1,17 @@
 <div class="schedule">
 	<div>Coming up:</div>
 	<br />
-	<div>
-		February 6 – lab #2 – Giving feedback for your toys <a
-			href="https://lu.ma/mkf4u0y4"
-			target="_blank">rsvp</a
-		>
-	</div>
     <div>
-        February 11 – Sesh #3 – Getting your message out there <a
+        February 11 – <strong>Sesh #3:</strong> Getting your message out there <a
             href="https://lu.ma/x4ejezf8"
             target="_blank">rsvp</a>
     </div>
+	<div>
+		February 13 – <strong>Lab #3:</strong> Giving feedback on launches <a
+			href="https://lu.ma/qqzl4r0x"
+			target="_blank">rsvp</a
+		>
+	</div>
     <br />
 	<div>
 		<a href="https://lu.ma/sidequest-s1" target="_blank">view master calendar here</a>
@@ -27,7 +27,9 @@
 	<div>
 		Go build --> <a href="https://mysidequest.xyz/s1/week-2" target="_blank">Week 2</a>
 	</div>
-	<div>(upcoming) &emsp; Week 3</div>
+	<div>
+		Go build --> <a href="https://mysidequest.xyz/s1/week-3" target="_blank">Week 3</a>
+	</div>
 	<div>(upcoming) &emsp; Week 4</div>
 	<div>(upcoming) &emsp; Week 5</div>
 	<div>(upcoming) &emsp; Week 6</div>
