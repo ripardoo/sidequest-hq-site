@@ -47,7 +47,7 @@
 		<!-- Some schedule text in the corner -->
 		<Schedule />
 
-		<Countdown targetDate={new Date('2025-03-03T00:00:00')} />
+		<Countdown targetDate={new Date('2025-03-09T16:00:00')} />
 
 		<!-- Draggable files, each with a custom icon -->
 		{#each files as file, i}
