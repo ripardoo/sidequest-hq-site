@@ -86,6 +86,22 @@ export const files = [
 				icon: '/videoIcon.svg',
 				highlight: false,
 				centered: false
+			},
+			{
+				name: "Lab 3",
+				type: 'file',
+				link: 'https://youtube.com/live/xIdmMT1igMs',
+				icon: '/videoIcon.svg',
+				highlight: false,
+				centered: false
+			},
+			{
+				name: "Session 4",
+				type: 'file',
+				link: 'https://youtube.com/live/ZcDYZONeqHg',
+				icon: '/videoIcon.svg',
+				highlight: false,
+				centered: false
 			}
 		],
 		highlight: true,
@@ -118,6 +134,14 @@ export const files = [
 				name: 'W3 submission',
 				type: 'file',
 				link: 'https://mysidequest.xyz/week3-submission',
+				icon: '/fileIcon.svg',
+				highlight: false,
+				centered: false
+			},
+			{
+				name: 'W4 submission',
+				type: 'file',
+				link: 'https://mysidequest.xyz/week4-submission',
 				icon: '/fileIcon.svg',
 				highlight: false,
 				centered: false
