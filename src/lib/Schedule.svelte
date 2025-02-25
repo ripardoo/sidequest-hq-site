@@ -2,13 +2,13 @@
 	<div>Coming up:</div>
 	<br />
     <div>
-        February 18 – <strong>Session #4:</strong> Iterating with others <a
-            href="https://lu.ma/ovcv1hx5"
+        February 27 – <strong>Lab #5:</strong> Marketing 101 <a
+            href="https://lu.ma/kkyane67"
             target="_blank">rsvp</a>
     </div>
 	<div>
-		February 20 – <strong>Lab #4:</strong> Giving feedback on iterations <a
-			href="https://lu.ma/jjw89n78"
+		March 4 – <strong>Session #6:</strong> Making a demo <a
+			href="https://lu.ma/7bgektjo"
 			target="_blank">rsvp</a
 		>
 	</div>
@@ -33,7 +33,9 @@
 	<div>
 		Go build --> <a href="https://mysidequest.xyz/s1/week-4" target="_blank">Week 4</a>
 	</div>
-	<div>(upcoming) &emsp; Week 5</div>
+	<div>
+		Go build --> <a href="https://mysidequest.xyz/s1/week-5" target="_blank">Week 5</a>
+	</div>
 	<div>(upcoming) &emsp; Week 6</div>
 </div>
 
