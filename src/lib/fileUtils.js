@@ -118,6 +118,14 @@ export const files = [
 				icon: '/videoIcon.svg',
 				highlight: false,
 				centered: false
+			},
+			{
+				name: "Session 5",
+				type: 'file',
+				link: 'https://youtube.com/live/TFEvxYTyLzM',
+				icon: '/videoIcon.svg',
+				highlight: false,
+				centered: false
 			}
 		],
 		highlight: true,

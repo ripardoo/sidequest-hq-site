@@ -2,13 +2,25 @@
 	<div>Coming up:</div>
 	<br />
     <div>
-        February 27 – <strong>Lab #5:</strong> Marketing 101 <a
-            href="https://lu.ma/kkyane67"
-            target="_blank">rsvp</a>
-    </div>
-	<div>
 		March 4 – <strong>Session #6:</strong> Making a demo <a
 			href="https://lu.ma/7bgektjo"
+			target="_blank">rsvp</a
+		>
+	</div>
+	<div>
+		March 6 – <strong>Lab #6:</strong> Office Hours <a
+			href="https://lu.ma/8n5uatxh"
+			target="_blank">rsvp</a
+		>
+	</div>
+	<div>
+		March 9 – <strong> Demo Day</strong><a
+			href="https://lu.ma/lk74n5kl"
+			target="_blank">rsvp</a>
+	</div>
+	<div>
+		March 15 – <strong> IRL in HEL</strong><a
+			href="https://lu.ma/v3doz5p6"
 			target="_blank">rsvp</a
 		>
 	</div>
@@ -36,9 +48,8 @@
 	<div>
 		Go build --> <a href="https://mysidequest.xyz/s1/week-5" target="_blank">Week 5</a>
 	</div>
-	<div>(upcoming) &emsp; Week 6</div>
-</div>
-
+		Go build --> <a href="https://mysidequest.xyz/s1/week-6" target="_blank">Week 6</a>
+	</div>
 <style>
 	/* The schedule info in the corner */
 	.schedule {
