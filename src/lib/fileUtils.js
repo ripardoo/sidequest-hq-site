@@ -120,9 +120,17 @@ export const files = [
 				centered: false
 			},
 			{
-				name: "Session 5",
+				name: "Lab 5",
 				type: 'file',
-				link: 'https://youtube.com/live/TFEvxYTyLzM',
+				link: 'https://youtube.com/live/uHAOK8_otYY',
+				icon: '/videoIcon.svg',
+				highlight: false,
+				centered: false
+			},
+			{
+				name: "Session 6",
+				type: 'file',
+				link: 'https://www.youtube.com/live/TFEvxYTyLzM',
 				icon: '/videoIcon.svg',
 				highlight: false,
 				centered: false
@@ -174,6 +182,14 @@ export const files = [
 				name: 'W5 submission',
 				type: 'file',
 				link: 'https://mysidequest.xyz/week5-submission',
+				icon: '/fileIcon.svg',
+				highlight: false,
+				centered: false
+			},
+			{
+				name: 'W6 - Demo submission',
+				type: 'file',
+				link: 'https://mysidequest.xyz/week6-submission',
 				icon: '/fileIcon.svg',
 				highlight: false,
 				centered: false
