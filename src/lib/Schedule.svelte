@@ -1,12 +1,6 @@
 <div class="schedule">
 	<div>Coming up:</div>
 	<br />
-    <div>
-		March 4 – <strong>Session #6:</strong> Making a demo <a
-			href="https://lu.ma/7bgektjo"
-			target="_blank">rsvp</a
-		>
-	</div>
 	<div>
 		March 6 – <strong>Lab #6:</strong> Office Hours <a
 			href="https://lu.ma/8n5uatxh"
@@ -14,12 +8,12 @@
 		>
 	</div>
 	<div>
-		March 9 – <strong> Demo Day</strong><a
+		March 9 – <strong> Demo Day </strong><a
 			href="https://lu.ma/lk74n5kl"
 			target="_blank">rsvp</a>
 	</div>
 	<div>
-		March 15 – <strong> IRL in HEL</strong><a
+		March 15 – <strong> IRL in HEL </strong><a
 			href="https://lu.ma/v3doz5p6"
 			target="_blank">rsvp</a
 		>
