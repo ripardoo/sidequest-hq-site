@@ -8,12 +8,12 @@
 		>
 	</div>
 	<div>
-		March 9 – <strong> Demo Day </strong><a
+		March 9 – <strong> Demo Day </strong> - <a
 			href="https://lu.ma/lk74n5kl"
 			target="_blank">rsvp</a>
 	</div>
 	<div>
-		March 15 – <strong> IRL in HEL </strong><a
+		March 15 – <strong> IRL in HEL </strong> - <a
 			href="https://lu.ma/v3doz5p6"
 			target="_blank">rsvp</a
 		>
